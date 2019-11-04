@@ -1,0 +1,61 @@
+% -*-coding: utf-8 -*-
+
+\usepackage{fancyhdr}
+\usepackage{color}
+
+\makeatletter
+
+\ifx\current@color\undefined
+\else
+    \definecolor{Gris}{gray}{.50}
+    \definecolor{GrisClaro}{gray}{.80}
+    \definecolor{TransparentGreen}{rgb}{0.7,0.7,0.8}
+    \definecolor{BrilliantBlue}{rgb}{0,0,0.4}
+    \definecolor{LiquidGreen}{rgb}{0.4,0.6,0}
+    \definecolor{MidGray}{rgb}{0.4,0.4,0.5}
+    \definecolor{Watermark}{rgb}{1,1,0.9}
+    \definecolor{OrangeUVigo}{rgb}{0.92941,0.43137,0}
+    \definecolor{BlueUVigo}{rgb}{0,0.27843,0.72941}
+    \newcommand{\rulecolor}[4]{
+      {\color{#1}\color@block{#2}{#3}{#4}}}
+    \newcommand{\shadebox}[1]{\fcolorbox{Negro}{GrisClaro}{\textcolor{Negro}{\parbox{\textwidth}{\centerline{#1}}}}}
+    \newcommand{\shadowbox}[2]{\fcolorbox{Negro}{GrisClaro}{\textcolor{Negro}{\makebox[#1]{\centerline{#2}}}}}
+\fi
+
+\makeatother
+
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[LO]{}
+\fancyfoot[C]{\thepage}
+\fancypagestyle{plain}{
+   \fancyhf{}
+   \fancyhead[LO]{
+     \setlength{\unitlength}{1mm}
+     \vskip 3mm
+     \begin{picture}(0,0)
+       \put(0,0){\includegraphics[height=15pt]{./head/unilogo.pdf}}
+       \put(50,7){
+       %\put(75,7){ short version
+         \parbox[t]{105mm}{
+           \begin{flushright}
+             \scshape\scriptsize\color{BlueUVigo}
+             \begin{tabular}{l}
+               Escola de \\ Enxañaría de \\ Telecomunicación
+             \end{tabular}
+             \begin{tabular}{l}
+               Grao en Enxañaría de \\ Tecnoloxías de \\ Telecomunicación
+             \end{tabular}
+             \begin{tabular}{l}
+               Mención: \\ Son e Imaxe \\ {\ }
+             \end{tabular}
+           \end{flushright}
+         }
+       }
+     \end{picture}}}
+
+\addto\captionsspanish{
+  \def\appendixname{Anexos}
+}
+\addto\captionsgalician{
+  \def\appendixname{Anexos}
+}

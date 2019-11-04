@@ -1,0 +1,29 @@
+% -*- TeX Mode -*-
+%
+%   Use this file for your own custom packages, command-definitions, etc...
+%
+
+\usepackage{multirow}
+\usepackage{footnote}
+\usepackage{amsmath}
+\usepackage{algorithm,algpseudocode}
+\usepackage{color}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\DeclareMathOperator{\Esp}{\mathrm I\!\mathrm E}
+\DeclareMathOperator{\R}{\mathrm I\!\mathrm R}
+\DeclareMathOperator{\Prob}{\mathrm I\!\mathrm P}
+\newtheorem{definition}[]{Definition}
+
+\newcounter{paragraphstep}[chapter]
+\newcommand{\paracount}{%
+        \stepcounter{paragraphstep}%
+        \theparagraphstep}
+        \setcounter{secnumdepth}{4}
+\renewcommand{\theparagraph}{\S\arabic{paragraph}}
+
+\definecolor{CornflowerBlue}{rgb}{0.39, 0.58, 0.93}
+\newcommand{\highlight}[1]{\textcolor{CornflowerBlue}{#1}}
+
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
